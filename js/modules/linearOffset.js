@@ -1,7 +1,8 @@
-import { createDownloadFile } from './createDownloadFile.js';
-import { msToTimecode } from './msToTimecode.js';
-import { objToSrtText, srtTextToObj } from './convertSrtTextAndObj.js';
-import { timecodeToMS } from './timecodeToMS.js';
+import { addFixedOffset } from './_addFixedOffset.js';
+import { createDownloadFile } from './_createDownloadFile.js';
+import { msToTimecode } from './_msToTimecode.js';
+import { objToSrtText, srtTextToObj } from './_convertSrtTextAndObj.js';
+import { timecodeToMS } from './_timecodeToMS.js';
 
 import { Decimal } from '../../node_modules/decimal.js/decimal.mjs';
 
@@ -10,10 +11,11 @@ export const linearOffset = async function(file, intP1, curP1, intP2, curP2) {
   intP1 = '00:07:17,570';
   curP1 = '00:07:17,570';
 
-  intP2 = '01:37:38,900';
-  curP2 = '01:37:44,795';
+  intP2 = '01:37:39,380';
+  curP2 = '01:37:44,770';
 
   // TODO: Come back later to add error animation when you do scss
+  // TODO: Make it more accurate next time by separating the timecode by 30 minutes each
   if (!intP1 || !curP1 || !intP2 || !curP2) throw new Error('Must specify points');
 
   const text = await file.text();
@@ -26,9 +28,9 @@ export const linearOffset = async function(file, intP1, curP1, intP2, curP2) {
   };
 
   const final = objToSrtText(linCalc(objPtsInMS, objArr));
+
   createDownloadFile(final);
 };
-
 
 
 
@@ -36,25 +38,36 @@ export const linearOffset = async function(file, intP1, curP1, intP2, curP2) {
 function linCalc(objPtsInMS, textObjArr) {
   const coeffObj = linCoeffFunc(objPtsInMS);
 
-  return textObjArr.map((txtObj) => {
+  const addedFixed = addFixedOffset(textObjArr, coeffObj.fixedOffset);
 
-    // TODO: Point 1 should not change in ms if there is 0 fixed change... bug :(
+  const addedLinear = addedFixed.map((txtObj) => {
+    if (txtObj.start <= objPtsInMS.intP1) {
+      return {
+        start: msToTimecode(txtObj.start),
+        end: msToTimecode(txtObj.end),
+        sentence: txtObj.sentence
+      };
+    }
+    
+    const minusStart = coeffObj.driftCoeff
+      .times(txtObj.start - objPtsInMS.intP1)
+      .floor()
+      .toPrecision();
 
-    const start = timecodeToMS(txtObj.start) + coeffObj.fixedOffset;
-    const end = timecodeToMS(txtObj.end) + coeffObj.fixedOffset;
-
-    const minusStart = coeffObj.driftCoeff.times(start - objPtsInMS.intP1).floor().toPrecision();
-    const minusEnd = coeffObj.driftCoeff.times(end - objPtsInMS.intP1).floor().toPrecision();
-
-    const newStart = msToTimecode(start + (+minusStart));
-    const newEnd = msToTimecode(end + (+minusEnd));
+    const minusEnd = coeffObj.driftCoeff
+      .times(txtObj.end - objPtsInMS.intP1)
+      .floor()
+      .toPrecision();
 
     return {
-      start: newStart,
-      end: newEnd,
+      start: msToTimecode(txtObj.start + (+minusStart)),
+      end: msToTimecode(txtObj.end + (+minusEnd)),
       sentence: txtObj.sentence
     };
   });
+
+  console.log(addedLinear);
+  return addedLinear;
 }
 
 
@@ -62,12 +75,18 @@ function linCalc(objPtsInMS, textObjArr) {
 
 
 function linCoeffFunc({ intP1, curP1, intP2, curP2 }) {
+  // linear is relative to 00:00:00,000.........
   const fixedOffset = intP1 - curP1;
   const trueCurP2 = curP2 + fixedOffset;
+  
   const diffP2 = intP2 - trueCurP2;
-  const driftCoeff = new Decimal(diffP2).dividedBy(intP2);
+
+  const driftCoeff = new Decimal(diffP2).dividedBy(intP2 - intP1);
+
+  console.log(driftCoeff.toPrecision());
   return {
     driftCoeff,
-    fixedOffset
+    fixedOffset,
   };
 }
+

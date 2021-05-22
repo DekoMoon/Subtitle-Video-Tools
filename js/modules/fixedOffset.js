@@ -1,23 +1,15 @@
-import { addMSToTimecode } from './addMSToTimecode.js';
-import { createDownloadFile } from './createDownloadFile.js';
-import { objToSrtText, srtTextToObj } from './convertSrtTextAndObj.js';
+import { addFixedOffset } from './_addFixedOffset.js';
+import { addMSToTimecode } from './_addMSToTimecode.js';
+import { createDownloadFile } from './_createDownloadFile.js';
+import { objToSrtText, srtTextToObj } from './_convertSrtTextAndObj.js';
 
 
 
 export const fixedOffset = async function(file, offset, start = '00:00:00,000') {
   const text = await file.text();
   const objArr = srtTextToObj(text);
-  const final = objToSrtText(addOffset(objArr, offset));
+  const final = objToSrtText(addFixedOffset(objArr, offset));
   createDownloadFile(final);
-}
-
-
-function addOffset(objArr = [], amount) {
-  return objArr.map((obj) => {
-    const start = addMSToTimecode(obj.start, amount); 
-    const end = addMSToTimecode(obj.end, amount);
-    return { start, end, sentence: obj.sentence };
-  });
 }
 
 

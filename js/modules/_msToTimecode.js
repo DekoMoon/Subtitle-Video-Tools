@@ -30,8 +30,6 @@ function addZeroes(el, curLength, desLength) {
 function msToTimeArr(ms, i = 3, arr = new Array(4)) {
 	const multiplier = (60 ** (i - 1)) * (1000);
   const remainer = ms % multiplier;
-
-  // console.log(ms, multiplier);
 	
   if (i === 0) {
     arr[i] = ms;
