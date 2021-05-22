@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subtitle Sync & Video Probe</title>
+
+  <!-- <link rel="stylesheet" href="css/general.css"> -->
+  <!-- <link rel="stylesheet" href="css/container-high.css"> -->
+  <!-- <link rel="stylesheet" href="css/double-button.css"> -->
+  <!-- <link rel="stylesheet" href="css/subtitle-container.css"> -->
+  <!-- <link rel="stylesheet" href="css/fixed-offset.css"> -->
+  <!-- <link rel="stylesheet" href="css/linear-offset.css"> -->
+  <!-- <link rel="stylesheet" href="css/video-analysis.css"> -->
+  <!-- <link rel="stylesheet" href="css/vid-container.css"> -->
+  <!-- <link rel="stylesheet" href="css/ffprobe-container.css"> -->
+
+  <link rel="stylesheet" href="css/main.css">
+  <script defer type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <main class="container">
+    <h1 class="container__title">Tools</h1>
+
+    <div class="combined-btns">
+      <button class="combined-btns__left combined-btns__left--selected">Subtitle Sync</button>
+      <button class="combined-btns__right">Video Analyze</button>
+    </div>
+
+    <section class="sub-container sb-container--hidden">
+      <h3 class="sub-container__title">Subtitle Sync Fix</h3>
+
+      <div class="drop-file-container">
+        <span class="drop-file-container__drop-file-name">Choose File</span>
+        <label for="drop-file-container__drop-file" class="drop-file-container__drop-file">Choose File</label>
+        <input type="file" id="drop-file-container__drop-file" class="drop-file-container__drop-file-input input" accept=".srt">
+      </div>
+
+      <div class="sub-container__choose-sync">
+        <label for="sub-container__sync-type" class="sub-container__sync-label">Sync Type</label>
+        <select name="sync" id="sub-container__sync-type" class="sub-container__sync-select select">
+          <option value="fixed" class="sub-container__fixed-option">Fixed Offset</option>
+          <option value="linear" class="sub-container__linear-option">Linear Drift</option>
+        </select>
+      </div>
+
+      <div class="fixed-menu fixed-mnu--hidden">
+        <div class="fixed-menu__start">
+          <span class="fixed-menu__start-title">Starting Point</span>
+          <input class="fixed-menu__start-input input" type="text" placeholder="00:00:00,000">
+        </div>
+
+        <div class="fixed-menu__offset">
+          <span class="fixed-menu__offset-title">Offset Amount</span>
+          <input class="fixed-menu__offset-input input" type="text" placeholder="Milliseconds">
+        </div>
+
+        <button class="fixed-menu__submit-btn button">Confirm</button>
+      </div>
+
+      <div class="linear-menu linear-menu--hidden">
+        <div class="linear-menu__caption-1">
+          <span class="linear-menu__caption-1-title">Caption Text 1</span>
+          <input type="text" placeholder="Intended: 00:04:50,000" class="linear-menu__caption-1-intended input">
+          <input type="text" placeholder="Current: 00:05:00,000" class="linear-menu__caption-1-current input">
+        </div>
+
+        <div class="linear-menu__caption-2">
+          <span class="linear-menu__caption-2-title">Caption Text 2</span>
+          <input type="text" placeholder="Intended: 00:30:10,000" class="linear-menu__caption-2-intended input">
+          <input type="text" placeholder="Current: 00:31:00,000" class="linear-menu__caption-2-current input">
+        </div>
+
+        <button class="linear-menu__submit-btn button">Confirm</button>
+      </div>
+    </section>
+
+
+
+    <section class="vid-anal-container vid-anal-container--hidden">
+      <h3 class="vid-anal-container__title">Video Analyzer (ffmpeg)</h3>
+
+      <div class="drop-file-container">
+        <span class="drop-file-container__drop-file-name">Choose File</span>
+        <label for="drop-file-container__drop-file" class="drop-file-container__drop-file">Choose File</label>
+        <input type="file" id="drop-file-container__drop-file" class="drop-file-container__drop-file-input input">
+      </div>
+
+      <button class="vid-anal-container__analyze-btn button">Analyze</button>
+
+      <hr class="vid-anal-container__line-break">
+
+      <div class="vid-anal-container__result-container">
+        <span class="vid-anal-container__enc">Encoder: </span>
+        <span class="vid-anal-container__dur">Duration: </span>
+        <span class="vid-anal-container__vid-codec">Video Codec: </span>
+        <span class="vid-anal-container__vid-br">Video Bitrate: </span>
+        <span class="vid-anal-container__res">Resolution: </span>
+        <span class="vid-anal-container__fps">Framerate: </span>
+        <span class="vid-anal-container__clr-codec">Color Encoder: </span>
+
+        <span class="vid-anal-container__aud-codec">Audio Codec: </span>
+        <span class="vid-anal-container__aud-br">Audio Bitrate: </span>
+        <span class="vid-anal-container__aud-hz">Audio Hertz: </span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
