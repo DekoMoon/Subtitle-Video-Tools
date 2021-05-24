@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subtitle & Video Editing Tools - Deko Moon</title>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="top-nav__search-bar">
+      <input type="text" id="top-nav__search-input" class="top-nav__search-input input-1">
+      <button class="top-nav__search-button">Ph</button>
+    </div>
+
+    <ul class="top-nav__button-wrapper">
+      <a href="../index.html" class="top-nav__home-link button-1">Home</a>
+      <a href="about.html" class="top-nav__about-link button-1">About</a>
+    </ul>
+  </nav>
+
+  <header class="header">
+    <h1 class="header__title h1">Video Analysis</h1>
+  </header>
+
+  <main class="main">
+    <div class="drop-file-box">
+      <span class="drop-file-box__name normal-text">Select File</span>
+      <label for="drop-file-box__file-input" class="drop-file-box__drop-label">Folder</label>
+      <input type="file" id="drop-file-box__file-input" class="drop-file-box__file-input input-file" accept=".srt">
+    </div>
+    <button class="main__submit-btn button-4">Confirm</button>
+
+    <hr class="main__hr-1">
+
+    <div class="analysis-result-box">
+      <div class="analysis-result-box__wrapper-1">
+        <span class="analysis-result-box__enc">Encoder: </span>
+        <span class="analysis-result-box__dur">Duration: </span>
+        <span class="analysis-result-box__vid-codec">Video Codec: </span>
+        <span class="analysis-result-box__vid-br">Video Bitrate: </span>
+        <span class="analysis-result-box__res">Resolution: </span>
+        <span class="analysis-result-box__fps">Framerate: </span>
+        <span class="analysis-result-box__clr-codec">Color Encoder: </span>
+      </div>
+
+      <div class="analysis-result-box__wrapper-2">
+        <span class="analysis-result-box__aud-codec">Audio Codec: </span>
+        <span class="analysis-result-box__aud-br">Audio Bitrate: </span>
+        <span class="analysis-result-box__aud-hz">Audio Hertz: </span>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

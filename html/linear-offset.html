@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools: Linear Offset</title>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="top-nav__search-bar">
+      <input type="text" id="top-nav__search-input" class="top-nav__search-input input-1">
+      <button class="top-nav__search-button">Ph</button>
+    </div>
+
+    <ul class="top-nav__button-wrapper">
+      <a href="../index.html" class="top-nav__home-link button-1">Home</a>
+      <a href="about.html" class="top-nav__about-link button-1">About</a>
+    </ul>
+  </nav>
+
+  <header class="header">
+    <h1 class="header__title h1">Linear Offset</h1>
+  </header>
+
+  <main class="main">
+    <div class="drop-file-box">
+      <span class="drop-file-box__name normal-text">Select File</span>
+      <label for="drop-file-box__file-input" class="drop-file-box__drop-label">Folder</label>
+      <input type="file" id="drop-file-box__file-input" class="drop-file-box__file-input input-file" accept=".srt">
+    </div>
+
+    <div class="linear-box">
+      <div class="linear-box__wrapper-1">
+        <span class="linear-box__name-1 normal-text">Caption Text 1</span>
+        <input type="text" placeholder="Intended: 00:04:50,000" class="linear-box__intended-input-1 input-2">
+        <input type="text" placeholder="Current: 00:05:00,000" class="linear-box__current-input-1 input-2">
+      </div>
+
+      <div class="linear-box__wrapper-2">
+        <span class="linear-box__caption-2-name normal-text">Caption Text 2</span>
+        <input type="text" placeholder="Intended: 00:30:10,000" class="linear-box__intended-input-2 input-2">
+        <input type="text" placeholder="Current: 00:31:00,000" class="linear-box__current-input-2 input-2">
+      </div>
+    </div>
+
+    <button class="main__submit-btn button-4">Confirm</button>
+  </main>
+</body>
+</html>
