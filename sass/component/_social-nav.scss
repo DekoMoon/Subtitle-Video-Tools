@@ -1,0 +1,24 @@
+.social-nav {
+  display: flex;
+  gap: 2rem;
+
+  &__youtube,
+  &__reddit,
+  &__github {
+    width: 5rem;
+    height: 5rem;
+    display: inline-block;
+  }
+
+  &__youtube {
+    @include bg-img-major(100%, 100%, "/img/youtube-logo.png");
+  }
+
+  &__reddit {
+    @include bg-img-major(100%, 100%, "/img/reddit-logo.png");
+  }
+
+  &__github {
+    @include bg-img-major(100%, 100%, "/img/github-logo.png");
+  }
+}

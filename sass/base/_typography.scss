@@ -1,3 +1,5 @@
+// Bases
+
 html {
   font-size: 62.5%;
 }
@@ -8,16 +10,27 @@ body {
   font-size: $regular-font-size;
 }
 
+
+// Elements
+
 .h1 {
   font-size: 3rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
 }
 
+
+
+// Inputs
+
 .input-1::placeholder {
   color: $input-ph-color;
   font-weight: 100;
 }
+
+
+
+// Buttons
 
 .button-1 {
   font-weight: 600;
@@ -33,10 +46,30 @@ body {
   text-decoration: none;
 }
 
+.button-5 {
+  color: $button-5-color;
+  text-decoration: none;
+}
+
+
+
+// h-header
+
 .h-header {
   &__title,
   &__button-wrapper,
   &__scroll-down-button {
     text-align: center;
+  }
+}
+
+
+// list-box
+
+.list-box {
+  &__title {
+    font-size: 1.9rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
   }
 }

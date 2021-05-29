@@ -1,0 +1,14 @@
+.list-box {
+  width: 100%;
+  height: 30rem;
+  padding: 2rem 3rem;
+
+  background-image: $top-nav-bg;
+  border: 2px solid black;
+  border-radius: 1rem;
+
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  gap: 2rem;
+}

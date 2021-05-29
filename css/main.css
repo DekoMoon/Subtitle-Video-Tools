@@ -35,8 +35,17 @@ body {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none; }
 
+.button-5 {
+  color: black;
+  text-decoration: none; }
+
 .h-header__title, .h-header__button-wrapper, .h-header__scroll-down-button {
   text-align: center; }
+
+.list-box__title {
+  font-size: 1.9rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase; }
 
 .button-1 {
   color: black;
@@ -51,6 +60,10 @@ body {
   justify-content: center;
   align-items: center; }
 
+.button-5 {
+  padding-bottom: 1px;
+  border-bottom: 1px solid black; }
+
 .ham-button {
   background: none;
   border: none;
@@ -64,6 +77,18 @@ body {
 .input-1 {
   padding: 3px;
   border: 1px solid #111111; }
+
+.list-box {
+  width: 100%;
+  height: 30rem;
+  padding: 2rem 3rem;
+  background-image: linear-gradient(0deg, rgba(128, 255, 191, 0.9), rgba(128, 255, 191, 0.6));
+  border: 2px solid black;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  gap: 2rem; }
 
 .search-bar {
   display: grid;
@@ -88,6 +113,37 @@ body {
   .search-bar__search-button:active {
     background-color: #444444; }
 
+.social-nav {
+  display: flex;
+  gap: 2rem; }
+  .social-nav__youtube, .social-nav__reddit, .social-nav__github {
+    width: 5rem;
+    height: 5rem;
+    display: inline-block; }
+  .social-nav__youtube {
+    background-image: url("/img/youtube-logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; }
+  .social-nav__reddit {
+    background-image: url("/img/reddit-logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; }
+  .social-nav__github {
+    background-image: url("/img/github-logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; }
+
+.footer {
+  width: 100%;
+  height: 15rem;
+  background-color: #666666;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .h-header {
   height: 80vh;
   background-image: url("https://live.staticflickr.com/4428/36401449295_ebd4df1f45_k.jpg");
@@ -104,6 +160,13 @@ body {
     flex-flow: column;
     align-items: center;
     gap: 2rem; }
+
+.h-main {
+  margin: 5rem 3rem;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  gap: 5rem; }
 
 .top-nav {
   background-image: linear-gradient(0deg, rgba(128, 255, 191, 0.9), rgba(128, 255, 191, 0.6));
