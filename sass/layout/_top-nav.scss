@@ -1,0 +1,44 @@
+.top-nav {
+  background-image: $top-nav-bg;
+  padding: 0 5px;
+
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  // align-items: center;
+
+  display: grid;
+  grid-template-columns: $width-logo auto $ham-stick-width;
+  align-items: center;
+  column-gap: 2rem;
+
+  &__icon {
+    width: $width-logo;
+    height: $height-logo;
+
+    @include bg-img-major($width-logo-bg, auto, "/img/youtube-logo.png");
+  }
+
+  &__search-bar {
+    
+  }
+
+
+  &__button-wrapper {
+    flex-basis: 100%;
+    margin: 0 5px;
+
+    display: flex;
+  }
+
+  &__button-wrapper--hidden {
+    display: none;
+  }
+
+  &__home-link,
+  &__about-link,
+  &__list-button {
+    padding: 1rem 2rem;
+  }
+
+}

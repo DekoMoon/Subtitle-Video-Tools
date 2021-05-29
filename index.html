@@ -5,25 +5,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Subtitle & Video Editing Tools - Deko Moon</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <script defer type="module" src="js/index.js"></script>
 </head>
 <body>
   <nav class="top-nav">
-    <div class="top-nav__search-bar">
-      <input type="text" id="top-nav__search-input" class="top-nav__search-input input-1">
-      <button class="top-nav__search-button">Ph</button>
+
+    <a href="index.html" class="top-nav__icon"></a>
+
+    <div class=" top-nav__search-bar search-bar">
+      <input type="text" id="search-bar__search-input" class="search-bar__search-input" placeholder="Search">
+      <button class="search-bar__search-button"></button>
     </div>
 
-    <ul class="top-nav__button-wrapper">
+    <button class="ham-button top-nav__ham-button">
+      <div class="ham-button__stick-1"></div>
+      <div class="ham-button__stick-2"></div>
+      <div class="ham-button__stick-3"></div>
+    </button>
+
+    <ul class="top-nav__button-wrapper top-nav__button-wrapper--hidden">
       <a href="index.html" class="top-nav__home-link button-1">Home</a>
       <a href="html/about.html" class="top-nav__about-link button-1">About</a>
+      <a href="#" class="top-nav__list-button button-1">Tools</a>
     </ul>
   </nav>
 
-  <header class="h-header">
-    <h1 class="h-header__title h1">
-      <span class="h-header__title-1">Welcome To Deko's</span> 
-      <span class="h-header__title-2">Subtitle & Video Toolkit</span>
-    </h1>
+  <header class="h-header header">
+    <h1 class="h-header__title h1">Deko's Subtitle And Video Toolkit</h1>
 
     <div class="h-header__button-wrapper">
       <a href="html/fixed-offset.html" class="h-header__fixed-offset-link button-2">Fixed Offset</a>
@@ -31,10 +42,10 @@
       <a href="html/video-analysis-link.html" class="h-header__video-analysis-link button-2">Video Analysis</a>
     </div>
 
-    <a href="#h-main" class="h-header__scroll-down-button button-3">More Tools &#8595;</a>
+    <a href="#main" class="h-header__scroll-down-button button-3">More Tools &#8595;</a>
   </header>
 
-  <main class="h-main" id="h-main">
+  <main class="main" id="main">
     <section class="sub-links">
       <a href="html/fixed-offset.html" class="sub-links__fixed-offset-link button-3">Fixed Offset</a>
       <a href="html/linear-offset.html" class="sub-links__linear-offset-link button-3">Linear Offset</a>

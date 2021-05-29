@@ -1,0 +1,25 @@
+.h-header {
+  height: 80vh;
+
+  @include bg-img-major(100%, 100%, "https://live.staticflickr.com/4428/36401449295_ebd4df1f45_k.jpg");
+
+  display: grid;
+  grid-template-rows: auto auto calc(#{$regular-font-size} + 1rem);
+  align-items: center;
+
+  &__title {
+    margin: 0 2rem;
+  }
+
+  &__button-wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__scroll-down-button {
+    
+  }
+}
+

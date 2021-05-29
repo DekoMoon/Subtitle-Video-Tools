@@ -1,4 +1,42 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
   box-sizing: border-box;
+  font-family: 'Roboto', 'Noto', sans-serif;
+  font-size: $regular-font-size;
+}
+
+.h1 {
+  font-size: 3rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+}
+
+.input-1::placeholder {
+  color: $input-ph-color;
+  font-weight: 100;
+}
+
+.button-1 {
+  font-weight: 600;
+}
+
+.button-2 {
+  color: $button-2-color;
+  text-decoration: none;
+}
+
+.button-3 {
+  color: $button-3-color;
+  text-decoration: none;
+}
+
+.h-header {
+  &__title,
+  &__button-wrapper,
+  &__scroll-down-button {
+    text-align: center;
+  }
 }

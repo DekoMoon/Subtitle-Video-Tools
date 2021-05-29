@@ -1,0 +1,17 @@
+.ham-button {
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+  display: grid;
+  
+  row-gap: calc(#{$ham-stick-size} * 2);
+
+  &__stick-1,
+  &__stick-2,
+  &__stick-3 {
+    width: $ham-stick-width;
+    border: $ham-stick-size solid $lighter-black;
+  }
+}

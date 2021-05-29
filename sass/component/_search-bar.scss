@@ -1,0 +1,29 @@
+.search-bar {
+  display: grid;
+  grid-template-columns: auto calc(#{$search-button-width} * 2);
+
+  background-color: $search-bar-bg-color;
+  border-radius: $search-bar-border-radius;
+
+  &__search-input {
+    padding: 7px 4px;
+    border: none;
+    border-radius: $search-bar-border-radius;
+    outline: none;
+  }
+
+  &__search-button {
+    width: 0;
+    padding: 7px $search-button-width;
+
+    background-color: $search-button-bg-color;
+    @include bg-img-major(auto, auto, "/img/white-serach-24p-1x.png");
+
+    border: none;
+    border-radius: $search-bar-border-radius;
+  }
+
+  &__search-button:active {
+    background-color: $search-button-bg-color-active;
+  }
+}

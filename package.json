@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "sass-auto": "node-sass sass/main.scss css/main.css -w",
     "sass": "node-sass sass/main.scss css/main.css"
   },
   "author": "",

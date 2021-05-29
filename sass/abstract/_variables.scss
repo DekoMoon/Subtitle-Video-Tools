@@ -1,0 +1,37 @@
+// Global
+$color-1: hsla(0, 0, 6.7%, 1);
+$regular-font-size: 1.6rem;
+
+// Button 2
+$button-2-color: black;
+
+// Button 3
+$button-3-color: hsla(0, 0%, 0%, 0.5);
+
+
+$input-ph-color: hsla(0, 0%, 47%, 0.95);
+
+
+$width-logo-bg: 3.5rem;
+$height-logo-bg: calc((9 / 16) * #{$width-logo-bg});
+
+$width-logo: calc(#{$width-logo-bg} + 2rem);
+$height-logo: calc(#{$height-logo-bg} + 2rem);
+
+
+$lighter-black: hsla(0, 0%, 10%, 1);
+
+// Ham
+$ham-stick-size: 2px;
+$ham-stick-width: 2.7rem;
+
+$top-nav-bg: linear-gradient(0deg, hsla(150, 100%, 75%, 0.9), hsla(150, 100%, 75%, 0.6));
+
+
+
+// Search Bar
+$search-bar-bg-color: white;
+$search-bar-border-radius: 5px;
+$search-button-bg-color: hsla(0, 0, 6.7%, 1);
+$search-button-bg-color-active: hsla(0, 0, 26.7%, 1);
+$search-button-width: 1.8rem;
