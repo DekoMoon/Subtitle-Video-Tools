@@ -11,3 +11,9 @@
   background-repeat: no-repeat;
   background-size: $width $height;
 }
+
+@mixin media($bp) {
+  @media #{$bp} {
+    @content
+  }
+}

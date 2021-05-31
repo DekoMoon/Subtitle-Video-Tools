@@ -49,11 +49,21 @@ $top-nav-bg: linear-gradient(0deg, hsla(150, 100%, 75%, 0.9), hsla(150, 100%, 75
 
 // Search Bar
 $search-bar-bg-color: white;
+$search-bar-max-width: 40rem;
 $search-bar-border-radius: 5px;
 $search-button-bg-color: hsla(0, 0, 6.7%, 1);
 $search-button-bg-color-active: hsla(0, 0, 26.7%, 1);
-$search-button-width: 1.8rem;
+$search-button-width: 3.6rem;
 
 
 // Footer
 $footer-bg-color: hsla(0, 0%, 40%, 1);
+
+
+
+
+
+// Media Queries
+$first-width-bp: (min-width: 530px);
+$second-width-bp: (min-width: 860px);
+$third-width-bp: (min-width: 1200px);

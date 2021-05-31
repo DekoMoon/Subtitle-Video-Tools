@@ -1,11 +1,6 @@
 .top-nav {
   background-image: $top-nav-bg;
-  padding: 0 5px;
-
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: space-between;
-  // align-items: center;
+  padding: 5px 5px 1rem 5px;
 
   display: grid;
   grid-template-columns: $width-logo auto $ham-stick-width;
@@ -19,26 +14,61 @@
     @include bg-img-major($width-logo-bg, auto, "/img/youtube-logo.png");
   }
 
-  &__search-bar {
-    
-  }
-
 
   &__button-wrapper {
+    grid-column: 1 / 4;
     flex-basis: 100%;
     margin: 0 5px;
 
     display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
+.top-nav {
+  @media #{$first-width-bp} {
+
+    &__logo {
+      grid-row: 1 / 2;
+    }
+
+    &__search-bar {
+      justify-self: right;
+      grid-row: 2 / 3;
+      grid-column: 2;
+
+      width: $search-bar-max-width;
+
+      position: relative;
+      left: 2rem;
+    }
+
+    &__ham-button {
+      display: none;
+    }
+
+    &__button-wrapper {
+      justify-self: right;
+      grid-row: 1 / 2;
+      grid-column: 2 / 4;
+      display: flex;
+      flex-flow: row;
+    }
   }
 
-  &__button-wrapper--hidden {
-    display: none;
-  }
+  @media #{$second-width-bp} {
+    grid-template-columns: $width-logo auto auto;
+    gap: 0;
+    &__search-bar {
+      grid-row: 1;
+      grid-column: 2 / 3;
+      position: static;
+    }
 
-  &__home-link,
-  &__about-link,
-  &__list-button {
-    padding: 1rem 2rem;
+    &__button-wrapper {
+      grid-column: 3 / 4;
+      justify-self: right;
+    }
   }
-
 }

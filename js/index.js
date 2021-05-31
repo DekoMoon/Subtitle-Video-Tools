@@ -4,3 +4,5 @@ const topNavBtnWrapper = document.querySelector('.top-nav__button-wrapper');
 topNavHamBtn.addEventListener('click', () => {
   topNavBtnWrapper.classList.toggle('top-nav__button-wrapper--hidden');
 });
+
+topNavBtnWrapper.classList.add('js-hidden');

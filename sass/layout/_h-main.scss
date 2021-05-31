@@ -6,3 +6,11 @@
   flex-flow: column;
   gap: 5rem;
 }
+
+.h-main {
+  @media #{$third-width-bp} {
+    margin: 20rem 3rem;
+    justify-content: center;
+    flex-flow: row;
+  }
+}

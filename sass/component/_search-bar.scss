@@ -1,11 +1,13 @@
 .search-bar {
+  max-width: $search-bar-max-width;
   display: grid;
-  grid-template-columns: auto calc(#{$search-button-width} * 2);
+  grid-template-columns: auto $search-button-width;
 
   background-color: $search-bar-bg-color;
   border-radius: $search-bar-border-radius;
 
   &__search-input {
+    min-width: 10rem;
     padding: 7px 4px;
     border: none;
     border-radius: $search-bar-border-radius;
@@ -14,7 +16,7 @@
 
   &__search-button {
     width: 0;
-    padding: 7px $search-button-width;
+    padding: 7px calc(#{$search-button-width} / 2);
 
     background-color: $search-button-bg-color;
     @include bg-img-major(auto, auto, "/img/white-serach-24p-1x.png");
@@ -27,3 +29,5 @@
     background-color: $search-button-bg-color-active;
   }
 }
+
+

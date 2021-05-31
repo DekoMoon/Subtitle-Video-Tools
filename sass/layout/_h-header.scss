@@ -19,3 +19,15 @@
   }
 }
 
+.h-header {
+  @media #{$second-width-bp} {
+    &__title {
+      display: flex;
+      flex-flow: column;
+    }
+    &__button-wrapper {
+      flex-flow: row;
+      justify-content: center;
+    }
+  }
+}
