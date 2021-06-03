@@ -18,7 +18,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
 
-  @media #{$second-width-bp} {
+  @media #{$min-width-bp-2} {
     font-size: 4.5rem;
   }
 }

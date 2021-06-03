@@ -11,12 +11,12 @@
 }
 
 .button-2 {
-  @media #{$second-width-bp} {
+  @media #{$min-width-bp-2} {
     width: 25rem;
     height: 3.75rem;
   }
 
-  @media #{$third-width-bp} {
+  @media #{$min-width-bp-3} {
     width: 30rem;
     height: 4.5rem;
   }

@@ -20,7 +20,7 @@
 }
 
 .h-header {
-  @media #{$second-width-bp} {
+  @media #{$min-width-bp-2} {
     &__title {
       display: flex;
       flex-flow: column;

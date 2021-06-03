@@ -30,9 +30,9 @@ $input-ph-color: hsla(0, 0%, 47%, 0.95);
 
 // Logo
 $width-logo-bg: 3.5rem;
-$height-logo-bg: calc((9 / 16) * #{$width-logo-bg});
-$width-logo: calc(#{$width-logo-bg} + 2rem);
-$height-logo: calc(#{$height-logo-bg} + 2rem);
+$height-logo-bg: (9 / 16) * $width-logo-bg;
+$width-logo: $width-logo-bg + 2rem;
+$height-logo: $height-logo-bg + 2rem;
 
 
 
@@ -54,6 +54,8 @@ $search-bar-border-radius: 5px;
 $search-button-bg-color: hsla(0, 0, 6.7%, 1);
 $search-button-bg-color-active: hsla(0, 0, 26.7%, 1);
 $search-button-width: 3.6rem;
+$search-button-pad-vert: 7px;
+$search-button-pad-hori: $search-button-width / 2;
 
 
 // Footer
@@ -64,6 +66,11 @@ $footer-bg-color: hsla(0, 0%, 40%, 1);
 
 
 // Media Queries
-$first-width-bp: (min-width: 530px);
-$second-width-bp: (min-width: 860px);
-$third-width-bp: (min-width: 1200px);
+
+$min-width-bp-1: (min-width: 530px);
+$min-width-bp-2: (min-width: 865px);
+$min-width-bp-3: (min-width: 1200px);
+
+$max-width-bp-1: (max-width: 530px);
+$max-width-bp-2: (max-width: 865px);
+$max-width-bp-3: (max-width: 1200px);

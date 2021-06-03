@@ -5,4 +5,4 @@ topNavHamBtn.addEventListener('click', () => {
   topNavBtnWrapper.classList.toggle('top-nav__button-wrapper--hidden');
 });
 
-topNavBtnWrapper.classList.add('js-hidden');
+topNavBtnWrapper.classList.add('top-nav__button-wrapper--hidden');
