@@ -24,7 +24,7 @@ $button-5-border-color: black;
 
 // Input Placeholder
 $input-ph-color: hsla(0, 0%, 47%, 0.95);
-
+$input-2-border-color: hsla(0, 0%, 20%, 1);
 
 
 
@@ -68,9 +68,19 @@ $footer-bg-color: hsla(0, 0%, 40%, 1);
 // Media Queries
 
 $min-width-bp-1: (min-width: 530px);
-$min-width-bp-2: (min-width: 865px);
+$min-width-bp-2: (min-width: 884px);
 $min-width-bp-3: (min-width: 1200px);
 
 $max-width-bp-1: (max-width: 530px);
-$max-width-bp-2: (max-width: 865px);
+$max-width-bp-2: (max-width: 884px);
 $max-width-bp-3: (max-width: 1200px);
+
+
+// Drop Label
+$drop-label-bg-color: white;
+$drop-label-border-color: black;
+
+
+
+// Fixed Offset
+$fo-main-bg-color: hsla(190, 100%, 70%, 0.1);

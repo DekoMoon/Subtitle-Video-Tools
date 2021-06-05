@@ -17,10 +17,6 @@ body {
   font-size: 3rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
-
-  @media #{$min-width-bp-2} {
-    font-size: 4.5rem;
-  }
 }
 
 
@@ -30,6 +26,10 @@ body {
 .input-1::placeholder {
   color: $input-ph-color;
   font-weight: 100;
+}
+
+.input-2 {
+  text-align: center;
 }
 
 
@@ -75,5 +75,22 @@ body {
     font-size: 1.9rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-transform: uppercase;
+  }
+}
+
+// a-main
+
+.a-main {
+  &__title-wrapper {
+    text-align: center;
+  }
+}
+
+
+// drop-file-box
+
+.drop-file-box {
+  &__drop-label {
+    font-size: 1.4rem;
   }
 }

@@ -1,0 +1,22 @@
+.drop-file-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &__drop-label {
+    width: 12rem;
+    height: 2.5rem;
+
+    background-color: $drop-label-bg-color;
+    border: 1px solid $drop-label-border-color;
+    border-radius: 10rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__file-input {
+    display: none;
+  }
+}

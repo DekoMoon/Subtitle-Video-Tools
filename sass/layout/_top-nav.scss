@@ -1,6 +1,6 @@
 .top-nav {
   background-image: $top-nav-bg;
-  padding: 5px 5px 1rem 5px;
+  padding: 5px 2.5rem 1rem 5px;
 
   display: flex;
   flex-wrap: wrap;
@@ -16,9 +16,6 @@
 
   &__search-bar {
     flex-basis: 50%;
-
-    position: relative;
-    // top: 1px;
   }
 
 
