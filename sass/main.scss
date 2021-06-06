@@ -30,8 +30,8 @@
 @import "component/input-1";
 @import "component/input-2";
 
+@import "component/linear-box";
 @import "component/list-box";
-
 @import "component/search-bar";
 @import "component/social-nav";
 
@@ -47,7 +47,9 @@
 @import "pages/about/a-footer";
 @import "pages/about/a-main";
 
-@import "pages/fixed-offset/fo-main.scss";
+@import "pages/fixed-offset/fo-main";
 
 @import "pages/home/h-header";
 @import "pages/home/h-main";
+
+@import "pages/linear-offset/lo-main";

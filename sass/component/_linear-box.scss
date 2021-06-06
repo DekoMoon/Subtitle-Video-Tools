@@ -1,0 +1,30 @@
+.linear-box {
+
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+
+  &__wrapper-1,
+  &__wrapper-2 {
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  &__intended-box-1,
+  &__current-box-1,
+  &__intended-box-2,
+  &__current-box-2 {
+    @include caption-box();
+  }
+
+
+  @media #{$min-width-bp-2} {
+    flex-flow: row;
+    gap: 10rem;
+
+    &__wrapper-1,
+    &__wrapper-2 {
+      gap: 1rem;
+    }
+  }
+}

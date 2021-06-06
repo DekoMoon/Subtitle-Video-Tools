@@ -3,15 +3,8 @@
   flex-flow: column;
   gap: 1rem;
 
-  &__start-wrapper,
-  &__offset-wrapper {
-    display: flex;
-    flex-flow: column;
-    gap: 1px 5px;
-  }
-
-  &__start-name,
-  &__offset-name {
-    // flex-basis: 100%;
+  &__start-box,
+  &__offset-box {
+    @include caption-box();
   }
 }

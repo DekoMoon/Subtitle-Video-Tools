@@ -12,8 +12,8 @@
   background-size: $width $height;
 }
 
-@mixin media($bp) {
-  @media #{$bp} {
-    @content
-  }
+@mixin caption-box() {
+  display: flex;
+  flex-flow: column;
+  gap: 1px 5px;
 }
