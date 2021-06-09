@@ -79,8 +79,13 @@ $max-width-bp-3: (max-width: 1200px);
 // Drop Label
 $drop-label-bg-color: white;
 $drop-label-border-color: black;
+$drop-label-error-border-color: red;
 
 
 
 // Fixed Offset
 $fo-main-bg-color: hsla(190, 100%, 70%, 0.1);
+
+
+// Video Analysis
+$va-main-bg-color: hsla(0, 0%, 20%, 1);

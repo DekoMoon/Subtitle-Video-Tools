@@ -8,7 +8,9 @@
 
   <link rel="stylesheet" href="/css/main.css">
 
-  <script defer type="module" src="/js/pages/topNav.js"></script>
+  <script defer type="module" src="/js/component/topNav.js"></script>
+  <script defer type="module" src="/js/component/dropFile.js"></script>
+
   <script defer type="module" src="/js/pages/linearOffsetPage.js"></script>
 </head>
 <body>
@@ -40,8 +42,9 @@
 
     <div class="drop-file-box">
       <span class="drop-file-box__name input-name">Select File</span>
-      <label for="drop-file-box__file-input" class="drop-file-box__drop-label">Folder</label>
+      <label for="drop-file-box__file-input" class="drop-file-box__drop-label">File</label>
       <input type="file" id="drop-file-box__file-input" class="drop-file-box__file-input input-file" accept=".srt">
+      <span class="drop-file-box__file-name drop-file-box__file-name--hidden">Placeholder</span>
     </div>
 
     <div class="linear-box">
@@ -75,7 +78,7 @@
 
         <div class="linear-box__intended-box-2">
           <span class="linear-box__intended-name-2 input-name">Intended</span>
-          <div class="linear-box__input-intended-wrapper-1">
+          <div class="linear-box__input-intended-wrapper-2">
             <input type="text" class="linear-box__hr-intended-input-2 input-2" placeholder="hr">
             <input type="text" class="linear-box__min-intended-input-2 input-2" placeholder="min">
             <input type="text" class="linear-box__sec-intended-input-2 input-2" placeholder="sec">

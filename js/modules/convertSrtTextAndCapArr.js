@@ -1,13 +1,13 @@
-export const srtTextToObj = function(text) {
+export const srtTextToCapArr = function(text) {
   const regex = /(^|\n)\d+\n/g;
   const textArr = text
     .split(regex)
     .filter(line => line.length !== 1 && line.length !== 0);
 
-  return convertToObj(textArr);
+  return convertToCapArr(textArr);
 };
 
-function convertToObj(textArr) {
+function convertToCapArr(textArr) {
   return textArr.map((line) => {
     const indexOfBackspace = line.indexOf('\n');
     const timecode = line.substring(0, indexOfBackspace);
@@ -35,7 +35,7 @@ function convertToObj(textArr) {
 
 
 
-export const objToSrtText = function(arr) {
+export const capArrToSrtText = function(arr) {
   return arr.reduce((acc, obj, i) => {
     const add = `${i + 1}\n${obj.start} --> ${obj.end}\n${obj.sentence}\n`;
     return acc + add;

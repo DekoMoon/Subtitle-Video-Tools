@@ -1,8 +1,8 @@
 import { addFixedOffset } from './_addFixedOffset.js';
-import { createDownloadFile } from './_createDownloadFile.js';
-import { msToTimecode } from './_msToTimecode.js';
-import { objToSrtText, srtTextToObj } from './_convertSrtTextAndObj.js';
-import { timecodeToMS } from './_timecodeToMS.js';
+import { createDownloadFile } from './createDownloadFile.js';
+import { msToTimecode } from './msToTimecode.js';
+import { capArrToSrtText, srtTextToCapArr } from './convertSrtTextAndCapArr.js';
+import { timecodeToMS } from './timecodeToMS.js';
 
 import { Decimal } from '../../node_modules/decimal.js/decimal.mjs';
 
@@ -19,7 +19,7 @@ export const linearOffset = async function(file, intP1, curP1, intP2, curP2) {
   if (!intP1 || !curP1 || !intP2 || !curP2) throw new Error('Must specify points');
 
   const text = await file.text();
-  const objArr = srtTextToObj(text);
+  const objArr = srtTextToCapArr(text);
   const objPtsInMS = {
     intP1: timecodeToMS(intP1),
     intP2: timecodeToMS(intP2), 
@@ -27,7 +27,7 @@ export const linearOffset = async function(file, intP1, curP1, intP2, curP2) {
     curP2: timecodeToMS(curP2)
   };
 
-  const final = objToSrtText(linCalc(objPtsInMS, objArr));
+  const final = capArrToSrtText(linCalc(objPtsInMS, objArr));
 
   createDownloadFile(final);
 };

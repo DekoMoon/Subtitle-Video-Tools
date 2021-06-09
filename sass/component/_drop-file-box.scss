@@ -3,6 +3,8 @@
   align-items: center;
   gap: 5px;
 
+  position: relative;
+
   &__drop-label {
     width: 12rem;
     height: 2.5rem;
@@ -18,5 +20,64 @@
 
   &__file-input {
     display: none;
+  }
+
+  &__file-name {
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__drop-label--error-animate {
+    position: relative;
+    animation-name: drop-label--error-animate;
+    animation-duration: 500ms;
+    @keyframes drop-label--error-animate {
+      10% {
+        border-color: $drop-label-error-border-color;
+        right: 2px;
+      }
+
+      20% {
+        right: 0;
+      }
+
+      30% {
+        right: -2px;
+      }
+
+      40% {
+        right: 0;
+      }
+
+      50% {
+        right: 2px;
+      }
+
+      60% {
+        right: 0;
+      }
+
+      70% {
+        right: -2px;
+      }
+
+      80% {
+        right: 0;
+      }
+
+      90% {
+        border-color: $drop-label-error-border-color;
+        right: 2px;
+      }
+
+      100% {
+        right: 0;
+      }
+
+    }
   }
 }

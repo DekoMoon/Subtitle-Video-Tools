@@ -93,4 +93,17 @@ body {
   &__drop-label {
     font-size: 1.4rem;
   }
+
+  &__file-name {
+    font-size: 1rem;
+    color: hsla(0, 0%, 20%, 1);
+  }
+}
+
+// video analysis main
+
+.va-main {
+  &__title {
+    text-align: center;
+  }
 }

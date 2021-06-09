@@ -3,8 +3,8 @@
 export function msToTimecode(ms) {
 	const timeArr = msToTimeArr(ms).reduce((acc, el, i) => {
     const elLength = el.toString().length;
-    // const digits = (i === 0) ? 3 : 0;
     if (i === 0) acc[3] = addZeroes(el, elLength, 3);
+    else if (i === 3) acc[0] = el;
     else acc[3 - i] = addZeroes(el, elLength, 2);
     
     return acc;
@@ -48,5 +48,5 @@ function msToTimeArr(ms, i = 3, arr = new Array(4)) {
     return msToTimeArr(remainer, i - 1, arr);
   }
   
-  throw 'Wrong';
+  throw new Error('msToTimeArr');
 }

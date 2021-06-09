@@ -17,3 +17,16 @@
   flex-flow: column;
   gap: 1px 5px;
 }
+
+@mixin main-default() {
+  max-width: 50rem;
+  background-color: $fo-main-bg-color;
+  padding: 3rem 0;
+  margin: 6rem auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 2rem;
+}

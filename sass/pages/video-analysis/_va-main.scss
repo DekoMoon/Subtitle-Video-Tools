@@ -1,0 +1,11 @@
+.va-main {
+  @include main-default();
+
+  &__hr-1 {
+    width: 90%;
+    height: 0.8rem;
+    background-color: $va-main-bg-color;
+    border: none;
+    border-radius: 50rem;
+  }
+}

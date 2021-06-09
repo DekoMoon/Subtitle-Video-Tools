@@ -1,15 +1,6 @@
 .lo-main {
   // Maybe a good idea to use mixin instead of layout because I don't exactly want to conform main to a default type (especially for lo-main)
-  max-width: 45rem;
-  background-color: $fo-main-bg-color;
-  padding: 3rem 0;
-  margin: 6rem auto;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  gap: 2rem;
+  @include main-default();
 
   @media #{$min-width-bp-2} {
     max-width: 75rem;

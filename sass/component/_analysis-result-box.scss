@@ -1,0 +1,29 @@
+.analysis-result-box {
+  width: 100%;
+  padding: 0 3rem;
+
+  display: flex;
+  flex-flow: column;
+  gap: 3rem;
+
+  &__wrapper-1,
+  &__wrapper-2 {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+  }
+
+  &__video-title,
+  &__audio-title {
+    position: relative;
+    right: 5px;
+  }
+}
+
+.analysis-result-box {
+  @media #{$min-width-bp-1} {
+    padding: 1rem;
+    flex-flow: row;
+    justify-content: space-around;
+  }
+}
