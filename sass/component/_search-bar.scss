@@ -1,10 +1,13 @@
 .search-bar {
   max-width: $search-bar-max-width;
-  display: grid;
-  grid-template-columns: auto $search-button-width;
 
   background-color: $search-bar-bg-color;
   border-radius: $search-bar-border-radius;
+
+  display: grid;
+  grid-template-columns: auto $search-button-width;
+
+  position: relative;
 
   &__search-input {
     min-width: 10rem;
@@ -23,11 +26,42 @@
 
     border: none;
     border-radius: $search-bar-border-radius;
+
+    cursor: pointer;
   }
 
   &__search-button:active {
     background-color: $search-button-bg-color-active;
   }
+
+  &__items {
+    width: 100%;
+    background-color: $search-items-bg-color;
+
+    border: 1px solid $search-items-border-color;
+    border-radius: 1px;
+
+    display: flex;
+    flex-flow: column;
+
+    position: absolute;
+    top: 100%;
+  }
+
+  &__items--hidden {
+    display: none;
+  }
+
+  &__item {
+    padding: 5px;
+    list-style-type: none;
+
+    &:hover {
+      background-color: $search-items-bg-color-hover;
+    }
+  }
+
+
 }
 
 

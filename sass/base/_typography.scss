@@ -55,6 +55,16 @@ body {
   text-decoration: none;
 }
 
+.button-6 {
+  font-size: 1.3rem;
+  color: $button-6-color;
+  text-decoration: none;
+
+  @media #{$min-width-bp-2} {
+    font-size: 1.6rem;
+  }
+}
+
 
 
 // h-header
@@ -105,5 +115,22 @@ body {
 .va-main {
   &__title {
     text-align: center;
+  }
+}
+
+// coming-soon
+
+.coming-soon {
+  &__h1 {
+    color: $coming-soon-h1-color;
+  }
+}
+
+
+// explanation
+
+.aside {
+  &__warning {
+    color: $explanation-warning-color;
   }
 }

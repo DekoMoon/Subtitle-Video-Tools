@@ -19,6 +19,9 @@ $button-3-color: hsla(0, 0%, 0%, 0.5);
 $button-5-color: black;
 $button-5-border-color: black;
 
+// Button 6
+$button-6-color: black;
+
 
 
 
@@ -48,6 +51,7 @@ $top-nav-bg: linear-gradient(0deg, hsla(150, 100%, 75%, 0.9), hsla(150, 100%, 75
 
 
 // Search Bar
+
 $search-bar-bg-color: white;
 $search-bar-max-width: 40rem;
 $search-bar-border-radius: 5px;
@@ -56,6 +60,10 @@ $search-button-bg-color-active: hsla(0, 0, 26.7%, 1);
 $search-button-width: 3.6rem;
 $search-button-pad-vert: 7px;
 $search-button-pad-hori: $search-button-width / 2;
+
+$search-items-bg-color: $search-bar-bg-color;
+$search-items-bg-color-hover: hsla(0, 0%, 50%, 0.2);
+$search-items-border-color: hsla(0, 0%, 0%, 0.1);
 
 
 // Footer
@@ -89,3 +97,15 @@ $fo-main-bg-color: hsla(190, 100%, 70%, 0.1);
 
 // Video Analysis
 $va-main-bg-color: hsla(0, 0%, 20%, 1);
+
+
+
+// coming-soon 
+$coming-soon-bg-color: hsla(0, 0%, 0%, 0.9);
+$coming-soon-h1-color: hsla(0, 0%, 85%, 1);
+
+
+// explanation
+$explanation-warning-color: hsla(0, 0%, 10%, 0.5);
+
+

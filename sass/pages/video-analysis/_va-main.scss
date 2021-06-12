@@ -1,6 +1,8 @@
 .va-main {
   @include main-default();
 
+  position: relative; // because of coming-soon
+
   &__hr-1 {
     width: 90%;
     height: 0.8rem;

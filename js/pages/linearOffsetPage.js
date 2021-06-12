@@ -1,6 +1,7 @@
 // import { componentToMS } from '../modules/componentToMS.js';
 import { dropFileInput, dropFileLabel } from '../constant/universalDom.js';
 import { componentArrToMS } from '../modules/componentArrToMS.js';
+import { linearOffset } from '../modules/linearOffset.js';
 
 const submitBtn = document.querySelector('.lo-main__submit-btn');
 
@@ -34,4 +35,5 @@ submitBtn.addEventListener('click', function() {
 
   // TODO: Got the ms... time to do the formula bois
 
+  linearOffset(file, intendedOneMS, currentOneMS, intendedTwoMS, currentTwoMS);
 });

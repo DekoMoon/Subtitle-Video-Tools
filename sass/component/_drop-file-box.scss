@@ -16,6 +16,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    cursor: pointer;
   }
 
   &__file-input {
@@ -35,49 +37,51 @@
     position: relative;
     animation-name: drop-label--error-animate;
     animation-duration: 500ms;
-    @keyframes drop-label--error-animate {
-      10% {
-        border-color: $drop-label-error-border-color;
-        right: 2px;
-      }
-
-      20% {
-        right: 0;
-      }
-
-      30% {
-        right: -2px;
-      }
-
-      40% {
-        right: 0;
-      }
-
-      50% {
-        right: 2px;
-      }
-
-      60% {
-        right: 0;
-      }
-
-      70% {
-        right: -2px;
-      }
-
-      80% {
-        right: 0;
-      }
-
-      90% {
-        border-color: $drop-label-error-border-color;
-        right: 2px;
-      }
-
-      100% {
-        right: 0;
-      }
-
-    }
   }
+}
+
+
+@keyframes drop-label--error-animate {
+  10% {
+    border-color: $drop-label-error-border-color;
+    right: 2px;
+  }
+
+  20% {
+    right: 0;
+  }
+
+  30% {
+    right: -2px;
+  }
+
+  40% {
+    right: 0;
+  }
+
+  50% {
+    right: 2px;
+  }
+
+  60% {
+    right: 0;
+  }
+
+  70% {
+    right: -2px;
+  }
+
+  80% {
+    right: 0;
+  }
+
+  90% {
+    border-color: $drop-label-error-border-color;
+    right: 2px;
+  }
+
+  100% {
+    right: 0;
+  }
+
 }
