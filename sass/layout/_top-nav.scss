@@ -12,9 +12,7 @@
   &__icon {
     width: $width-logo;
     height: $height-logo;
-
-    // TODO: Image!!!
-    @include bg-img-major($width-logo-bg, auto, "");
+    @include bg-img-major($width-logo-bg, auto, "/img/temp-logo.png");
   }
 
   &__search-bar {

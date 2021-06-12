@@ -373,7 +373,7 @@ body {
   .top-nav__icon {
     width: 5.5rem;
     height: 3.96875rem;
-    background-image: url("");
+    background-image: url("/img/temp-logo.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 3.5rem auto; }
