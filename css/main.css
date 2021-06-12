@@ -135,6 +135,12 @@ body {
   padding-bottom: 1px;
   border-bottom: 1px solid black; }
 
+.button-6 {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  display: inline-block; }
+
 .drop-file-box {
   display: flex;
   align-items: center;
@@ -293,7 +299,6 @@ body {
   .search-bar__items--hidden {
     display: none; }
   .search-bar__item {
-    padding: 5px;
     list-style-type: none; }
     .search-bar__item:hover {
       background-color: rgba(128, 128, 128, 0.2); }
