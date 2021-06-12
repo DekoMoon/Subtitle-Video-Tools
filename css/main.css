@@ -278,7 +278,7 @@ body {
     width: 0;
     padding: 7px 1.8rem;
     background-color: #111111;
-    background-image: url("/img/white-serach-24p-1x.png");
+    background-image: url("/img/white-search-24p-1x.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto auto;
@@ -291,6 +291,7 @@ body {
     width: 100%;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: none;
     border-radius: 1px;
     display: flex;
     flex-flow: column;
@@ -326,6 +327,13 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%; }
 
+.vert-ordered-list {
+  padding: 5px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1rem; }
+
 .aside {
   padding: 10rem 1rem;
   display: flex;
@@ -360,11 +368,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   .top-nav__icon {
     width: 5.5rem;
     height: 3.96875rem;
-    background-image: url("/img/youtube-logo.png");
+    background-image: url("");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 3.5rem auto; }
@@ -377,6 +386,22 @@ body {
     flex-flow: column;
     align-items: center; }
   .top-nav__button-wrapper--hidden {
+    display: none; }
+  .top-nav__list-button-toolkit {
+    width: 15rem;
+    height: 10rem;
+    border: 1px solid black;
+    border-top: none;
+    border-radius: 2px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: calc(100% - 2rem);
+    transform: translateX(-100%); }
+  .top-nav__list-button-toolkit--hidden {
     display: none; }
 
 @media (min-width: 530px) {

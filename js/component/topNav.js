@@ -1,3 +1,8 @@
+
+/*******
+* Variables
+********/
+
 const topNavHamBtn = document.querySelector('.top-nav__ham-button');
 const topNavBtnWrapper = document.querySelector('.top-nav__button-wrapper');
 
@@ -5,6 +10,9 @@ const searchBar = document.querySelector('.search-bar');
 const searchBarInp = document.querySelector('.search-bar__search-input');
 const searchBarBtn = document.querySelector('.search-bar__search-button');
 const searchBarItems = document.querySelector('.search-bar__items');
+
+const listBtn = document.querySelector('.top-nav__list-button');
+const listBtnToolkit = document.querySelector('.top-nav__list-button-toolkit');
 
 const tools = [
   [ 'fixed offset', '/html/fixed-offset.html' ], 
@@ -21,12 +29,34 @@ const tools = [
 */
 
 
+/*******
+* Code
+********/
+
+topNavBtnWrapper.classList.add('top-nav__button-wrapper--hidden');
+
+
+
+
+
+
+/*******
+* Event Listeners
+********/
+
+
+
+
+/* Buttons */
+
 topNavHamBtn.addEventListener('click', () => {
   topNavBtnWrapper.classList.toggle('top-nav__button-wrapper--hidden');
 });
 
-topNavBtnWrapper.classList.add('top-nav__button-wrapper--hidden');
 
+
+
+/* Search Bar */
 
 searchBarInp.addEventListener('focus', (e) => {
   searchBarItems.classList.remove('search-bar__items--hidden');
@@ -69,5 +99,14 @@ document.body.addEventListener('click', (e) => {
   }
 
   searchBarItems.classList.add('search-bar__items--hidden');
+});
+
+
+
+
+/* Tools */
+
+listBtn.addEventListener('click', () => {
+  listBtnToolkit.classList.toggle('top-nav__list-button-toolkit--hidden');
 });
 

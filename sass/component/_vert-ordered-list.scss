@@ -1,0 +1,15 @@
+.vert-ordered-list {
+
+  padding: 5px;
+  
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1rem;
+
+  &__fixed-offset-link,
+  &__linear-offset-link,
+  &__video-analysis-link {
+
+  }
+}
