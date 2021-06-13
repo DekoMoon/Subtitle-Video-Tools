@@ -7,9 +7,9 @@
     "sass-auto": "node-sass sass/main.scss css/main.css -w",
     "sass": "node-sass sass/main.scss css/main.css",
     "parcel": "parcel /html/index.html",
-    "parcel-build": "parcel build /html/index.html"
+    "parcel-build": "parcel build ./html/index.html"
   },
-  "author": "",
+  "author": "Owen Truong",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^6.0.0",
