@@ -6,8 +6,8 @@
   "scripts": {
     "sass-auto": "node-sass sass/main.scss css/main.css -w",
     "sass": "node-sass sass/main.scss css/main.css",
-    "parcel": "parcel ./html/index.html",
-    "parcel-build": "parcel build ./html/index.html"
+    "parcel": "parcel /html/index.html",
+    "parcel-build": "parcel build /html/index.html"
   },
   "author": "",
   "license": "ISC",
