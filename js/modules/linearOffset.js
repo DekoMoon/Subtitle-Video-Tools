@@ -6,6 +6,8 @@ import { timecodeToMS } from './timecodeToMS.js';
 
 import { Decimal } from '../../node_modules/decimal.js/decimal.mjs';
 
+import 'regenerator-runtime/runtime'
+
 export const linearOffset = async function(file, intP1MS = 0, curP1MS = 0, intP2MS = 0, curP2MS = 0) {
   // TODO: Make it more accurate next time by separating the timecode by 10 minutes each
 

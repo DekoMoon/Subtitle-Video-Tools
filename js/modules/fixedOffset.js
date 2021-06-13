@@ -1,7 +1,7 @@
 import { addFixedOffsetToCapArr } from './addFixedOffsetToCapArr.js';
 import { createDownloadFile } from './createDownloadFile.js';
 import { capArrToSrtText, srtTextToCapArr } from './convertSrtTextAndCapArr.js';
-
+import 'regenerator-runtime/runtime'
 
 
 export const fixedOffset = async function(file, offsetMS = 0, startMS = 0) {
