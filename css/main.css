@@ -278,7 +278,7 @@ body {
     width: 0;
     padding: 7px 1.8rem;
     background-color: #111111;
-    background-image: url("/img/white-search-24p-1x.png");
+    background-image: url("../img/white-search-24p-1x.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto auto;
@@ -312,17 +312,17 @@ body {
     height: 5rem;
     display: inline-block; }
   .social-nav__youtube {
-    background-image: url("/img/youtube-logo.png");
+    background-image: url("../img/youtube-logo.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%; }
   .social-nav__reddit {
-    background-image: url("/img/reddit-logo.png");
+    background-image: url("../img/reddit-logo.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%; }
   .social-nav__github {
-    background-image: url("/img/github-logo.png");
+    background-image: url("../img/github-logo.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%; }
@@ -373,7 +373,7 @@ body {
   .top-nav__icon {
     width: 5.5rem;
     height: 3.96875rem;
-    background-image: url("/img/temp-logo.png");
+    background-image: url("../img/temp-logo.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 3.5rem auto; }

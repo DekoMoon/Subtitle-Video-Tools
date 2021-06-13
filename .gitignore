@@ -1,5 +1,8 @@
-poor
-node_modules
-.DS_Store
 **/.DS_Store
+
+.cache
+.DS_Store
+
+dist
 img
+node_modules

@@ -11,14 +11,14 @@
   }
 
   &__youtube {
-    @include bg-img-major(100%, 100%, "/img/youtube-logo.png");
+    @include bg-img-major(100%, 100%, "../img/youtube-logo.png");
   }
 
   &__reddit {
-    @include bg-img-major(100%, 100%, "/img/reddit-logo.png");
+    @include bg-img-major(100%, 100%, "../img/reddit-logo.png");
   }
 
   &__github {
-    @include bg-img-major(100%, 100%, "/img/github-logo.png");
+    @include bg-img-major(100%, 100%, "../img/github-logo.png");
   }
 }

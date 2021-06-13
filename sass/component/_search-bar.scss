@@ -22,7 +22,7 @@
     padding: $search-button-pad-vert $search-button-pad-hori;
 
     background-color: $search-button-bg-color;
-    @include bg-img-major(auto, auto, "/img/white-search-24p-1x.png");
+    @include bg-img-major(auto, auto, "../img/white-search-24p-1x.png");
 
     border: none;
     border-radius: $search-bar-border-radius;

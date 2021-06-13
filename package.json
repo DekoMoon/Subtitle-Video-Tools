@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "sass-auto": "node-sass sass/main.scss css/main.css -w",
-    "sass": "node-sass sass/main.scss css/main.css"
+    "sass": "node-sass sass/main.scss css/main.css",
+    "parcel": "parcel html/index.html",
+    "parcel-build": "parcel build html/index.html"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^6.0.0"
+    "node-sass": "^6.0.0",
+    "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
     "decimal.js": "^10.2.1"

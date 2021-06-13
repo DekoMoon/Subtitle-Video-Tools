@@ -1,5 +1,2 @@
-- Create Search Bar Functionality and its' html & scss
-- Create Tools Functionality and its' html and scss
-- Change Logo
 - Parcel
 - GitHub
