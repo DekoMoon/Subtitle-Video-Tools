@@ -15,9 +15,9 @@ const listBtn = document.querySelector('.top-nav__list-button');
 const listBtnToolkit = document.querySelector('.top-nav__list-button-toolkit');
 
 const tools = [
-  [ 'fixed offset', '../../html/fixed-offset.html' ], 
-  [ 'linear offset', '../../html/linear-offset.html' ], 
-  [ 'video analysis', '../../html/video-analysis.html' ]
+  [ 'fixed offset', '../fixed-offset.html' ], 
+  [ 'linear offset', '../linear-offset.html' ], 
+  [ 'video analysis', '../video-analysis.html' ]
 ];
 
 /*
